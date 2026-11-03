@@ -43,4 +43,4 @@ ignore = ["RUF001", "RUF002", "RUF003"]  # textos en español con «», — y �
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-q"
+addopts = "-v --no-header"

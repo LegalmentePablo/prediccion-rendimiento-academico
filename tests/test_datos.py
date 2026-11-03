@@ -29,6 +29,7 @@ def test_el_reporte_detecta_las_etiquetas_incoherentes_de_ciencias_naturales(df)
         (lambda d: d.assign(Periodo1=[6.0, 3.0]), "fuera de la escala"),
         (lambda d: d.assign(Estudiantes=[1, 1]), "repetidos"),
     ],
+    ids=["columna-faltante", "nota-vacia", "nota-fuera-de-escala", "estudiante-repetido"],
 )
 def test_validar_rechaza_datos_invalidos(cambio, mensaje):
     base = pd.DataFrame(

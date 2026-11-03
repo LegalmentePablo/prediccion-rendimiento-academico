@@ -1,3 +1,6 @@
+import re
+import unicodedata
+
 import numpy as np
 import pandas as pd
 import pytest
@@ -21,7 +24,13 @@ def test_la_regla_base_predice_perdida_si_la_nota_p1_es_menor_a_tres():
     assert np.all(np.diff(riesgo) < 0), "a mayor nota, menor riesgo"
 
 
-@pytest.mark.parametrize("nombre", MODELOS)
+def _id(nombre: str) -> str:
+    """Nombre del modelo sin tildes ni espacios, para que pytest lo muestre legible."""
+    ascii_ = unicodedata.normalize("NFKD", nombre).encode("ascii", "ignore").decode()
+    return re.sub(r"\W+", "-", ascii_.lower()).strip("-")
+
+
+@pytest.mark.parametrize("nombre", MODELOS, ids=_id)
 def test_cada_modelo_entrena_y_da_una_prediccion_por_fila(nombre, particion):
     modelo = clone(MODELOS[nombre]).fit(particion.X_entrenamiento, particion.y_entrenamiento)
     prediccion = modelo.predict(particion.X_prueba)

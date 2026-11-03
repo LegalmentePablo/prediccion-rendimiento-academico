@@ -73,6 +73,12 @@ positiva es «pierde el periodo 2».
 El mejor modelo se elige por AUC en la validación cruzada (árbol de decisión, 0,666), nunca
 mirando la prueba. Los hiperparámetros se fijaron de antemano, sin búsqueda.
 
+Así se ve al ejecutarlo; los números son los mismos de la tabla:
+
+<p align="center">
+  <img src="docs/capturas/terminal_resultados.png" width="80%" alt="Consola: uv run prediccion-rendimiento muestra las métricas de los siete modelos en el conjunto de prueba">
+</p>
+
 <p align="center">
   <img src="reports/figuras/curvas_roc.png" width="48%" alt="Curvas ROC de los modelos y las líneas base en el conjunto de prueba">
   <img src="reports/figuras/riesgo_por_nota.png" width="48%" alt="Porcentaje de estudiantes que pierden el periodo 2 según su nota del periodo 1, por materia">
@@ -93,6 +99,7 @@ mirando la prueba. Los hiperparámetros se fijaron de antemano, sin búsqueda.
 
 ```
 ├── data/raw/                 CSV originales, uno por materia (anónimos)
+├── docs/capturas/            Capturas de consola usadas en este README
 ├── notebooks/
 │   ├── analisis.ipynb        Análisis completo, ejecutable en local o en Colab
 │   └── original/             Notebook de 2023, archivado sin cambios de lógica
@@ -132,6 +139,13 @@ otra carpeta, indica las rutas con `--datos` y `--salida`.
 uv run pytest
 uv run ruff check . && uv run ruff format --check .
 ```
+
+<p align="center">
+  <img src="docs/capturas/terminal_pruebas.png" width="90%" alt="Consola: las 19 pruebas de pytest pasan y ruff no encuentra problemas de estilo">
+</p>
+
+La integración continua repite esto en cada cambio con Python 3.11, 3.12 y 3.13, y además
+ejecuta el notebook de principio a fin.
 
 ## Limitaciones
 

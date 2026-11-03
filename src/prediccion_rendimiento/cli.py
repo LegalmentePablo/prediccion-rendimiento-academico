@@ -65,7 +65,7 @@ def main(argv: list[str] | None = None) -> None:
     print("Métricas en el conjunto de prueba:\n")
     print(resultado["prueba"].round(3).to_string())
     print(f"\nMejor modelo en validación cruzada: {resultado['mejor_modelo']}")
-    print(f"Tablas y figuras en: {args.salida.resolve()}")
+    print(f"Tablas y figuras en: {args.salida}/")
 
 
 if __name__ == "__main__":
