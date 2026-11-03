@@ -1,0 +1,6 @@
+materia,estudiantes,pierde_p1,pierde_p2,etiqueta_p1_coherente,etiqueta_p2_coherente,correlacion_p1_p2
+Matemáticas,2718,0.2127,0.174,0.993,0.9978,0.3997
+Inglés,2717,0.3309,0.3055,1.0,0.9779,0.1368
+Física,2717,0.3309,0.3044,1.0,0.9879,0.1561
+Ciencias sociales,2717,0.3309,0.3614,1.0,1.0,0.0618
+Ciencias naturales,2718,0.475,0.4669,0.5118,0.5044,0.0436

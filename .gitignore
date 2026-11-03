@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Entorno y secretos
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+token*.json
+
+# Editores y sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

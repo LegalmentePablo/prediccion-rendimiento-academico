@@ -1,0 +1,8 @@
+,AUC ROC,Exactitud balanceada,Sensibilidad,Precisión,F1
+Bosque aleatorio,0.6537,0.6143,0.6598,0.421,0.514
+Red neuronal (MLP),0.6507,0.613,0.7021,0.4119,0.5192
+Árbol de decisión,0.6438,0.6133,0.726,0.4085,0.5228
+KNN,0.6346,0.5558,0.2694,0.4478,0.3364
+Regresión logística,0.6253,0.5944,0.5788,0.4135,0.4824
+Tasa por materia,0.613,0.5805,0.5091,0.4099,0.4542
+Regla: nota P1 < 3,0.5612,0.5683,0.4224,0.4125,0.4174
