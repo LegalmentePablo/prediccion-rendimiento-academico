@@ -30,8 +30,8 @@ a una red neuronal, contra dos líneas base, con una evaluación agrupada por es
 
 ## Contexto
 
-Lo hice durante la universidad, en 2023, como proyecto académico de aprendizaje automático. La
-versión original era un notebook de Google Colab que leía las notas desde Google Drive y probaba
+Lo hice en 2023, durante mis estudios en la **Universidad de Medellín**, como proyecto de la
+materia **Ecuaciones Diferenciales**. La versión original era un notebook de Google Colab que leía las notas desde Google Drive y probaba
 varios modelos: regresión logística, regresión lineal, árboles de decisión, KNN, una red neuronal
 de scikit-learn y una red profunda en TensorFlow.
 
